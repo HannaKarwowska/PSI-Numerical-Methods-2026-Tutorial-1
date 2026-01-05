@@ -1,4 +1,6 @@
 # Hello World for PSI Numerical Methods 2026 trial 2
+import numpy as np
+import matplotlib.pyplot as plt
 
 def myexp(x, N=10):
     """
@@ -27,3 +29,18 @@ if __name__ == "__main__":
     print("e(1) with 10 terms is", myexp(1.0, 10))
     print("e(1) with 20 terms is", myexp(1.0, 20))
     print("e(1) with 40 terms is", myexp(1.0, 40))
+
+
+print("Hello, PSI 2026!")
+print(np.e**(1.2))
+
+x = np.arange(0,2*np.pi,0.01)
+y = np.sin(x)
+y2 = np.cos(x)
+
+fig, ax = plt.subplots()
+ax.plot(x,y, label = "sin(x)")
+ax.plot(x,y2, label = "cos(x)")
+ax.legend()
+plt.savefig("trig")
+plt.show()
